@@ -7,9 +7,14 @@ app = Flask(__name__)
 def root():
     return '（手动狗头）🈲❌❗⚠'
 
-@app.route('/feishu_test')
+@app.route('/function')
 def bot_test():
-    return jsonify({"challenge": "11111","token": "yztvzXherBmpvy01Sje4Hf1RPa3HdkKu","type": "url_verification"})
+    return jsonify({
+        "info":"发送对应编号可以查看对应功能",
+        "function1":"1.功能列表（查看全部功能）",
+        "function2": "2.报工情况查询",
+        "function3": "3.待开发"
+    })
 
 
 
