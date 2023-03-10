@@ -1,11 +1,16 @@
 from flask import Flask, jsonify
 import os
+from functions import sheet_read
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/feishu_test')
 def root():
-    return jsonify({"results":"HELLO World!"})
+    return jsonify({ 
+    "challenge": "11111",
+    "token": "yztvzXherBmpvy01Sje4Hf1RPa3HdkKu",
+    "type": "url_verification"
+})
     
 
 @app.route('/table')
