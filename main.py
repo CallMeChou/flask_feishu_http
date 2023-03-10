@@ -10,11 +10,8 @@ def root():
 @app.route('/feishu_test')
 def bot_test():
     return jsonify({"challenge": "11111","token": "yztvzXherBmpvy01Sje4Hf1RPa3HdkKu","type": "url_verification"})
-    
 
-@app.route('/table')
-def index():
-    return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
+
 
 
 if __name__ == '__main__':
