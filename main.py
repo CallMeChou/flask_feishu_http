@@ -13,9 +13,9 @@ def root():
 def bot_test():
     return jsonify({
         "info":"发送对应编号可以查看对应功能",
-        "function1":"1.功能列表（查看全部功能）",
-        "function2": "2.报工情况查询",
-        "function3": "3.待开发"
+        "function1":"功能列表（查看全部功能）",
+        "function2": "报工情况查询",
+        "function3": "待开发"
     })
 
 
