@@ -67,9 +67,15 @@ def sheet_read(Authorization,sheet_token,sheetId,ranges):
         'Content-Type': 'application/json; charset=utf-8'
     }
     res=requests.get(url, headers=headers)
-    data=res.json()['data']['valueRanges'][0]['values']
+    # data=res.json()['data']['valueRanges'][0]['values']
     # print(res.text)
     # print(res.json())
+    data=res['data']['valueRanges'][0]['values']
+    df=pd.DataFrame(data,columns=data[0])[1:]   
+
+    # print(df)
+    json_data=df.to_json(orient = 'columns')
+    return json_data
 
     
 

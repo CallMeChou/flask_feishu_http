@@ -6,11 +6,7 @@ app = Flask(__name__)
 
 @app.route('/feishu_test')
 def root():
-    return jsonify({ 
-    "challenge": "11111",
-    "token": "yztvzXherBmpvy01Sje4Hf1RPa3HdkKu",
-    "type": "url_verification"
-})
+    return jsonify({"challenge": "11111","token": "yztvzXherBmpvy01Sje4Hf1RPa3HdkKu","type": "url_verification"})
     
 
 @app.route('/table')
