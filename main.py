@@ -3,6 +3,8 @@ import os
 from functions import sheet_read
 
 app = Flask(__name__)
+app.config['JSON_AS_ASCII'] = False
+
 @app.route('/')
 def root():
     return '（手动狗头）🈲❌❗⚠'
