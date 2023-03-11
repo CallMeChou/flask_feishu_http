@@ -12,11 +12,14 @@ def root():
 @app.route('/function')
 def bot_test():
     return jsonify({
-        "info":"发送对应编号可以查看对应功能",
-        "function1":"功能列表（查看全部功能）",
+        "info":"发送对应功能即可",
+        "function1":"功能列表",
         "function2": "报工情况查询",
         "function3": "待开发"
     })
+
+@app.route('/function1')
+def function1():
 
 
 
