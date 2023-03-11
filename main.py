@@ -13,14 +13,18 @@ def root():
 def bot_test():
     return jsonify({
         "info":"发送对应功能即可",
-        "function1":"功能列表",
-        "function2": "报工情况查询",
+        "function1":"报工查询",
+        "function2": "其他",
         "function3": "待开发"
     })
 
-@app.route('/function1')
+@app.route('/报工查询')
 def function1():
-
+    from check import main
+    name="小周"
+    webhook="https://www.feishu.cn/flow/api/trigger-webhook/c902ef4c9b6a57988ef22516cec91cac"
+    main(name,webhook)
+    return 
 
 
 

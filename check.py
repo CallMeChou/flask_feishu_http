@@ -130,7 +130,7 @@ def webhook_method(webhook_url,today,yesterday,today_msg,yesterday_msg,name):
   
 
 
-def main():
+def main(webhook):
 
 
     # 获取时间
@@ -162,9 +162,11 @@ def main():
         # 判断最近两天报工情况
         yesterday_msg = info['result']['data'][0][l_day]
         today_msg = info['result']['data'][0][t_day]
-        
-        name = "周纪元"
-        # send_msg(name, warn)
+        if name == None:
+            name='测试用户'
+        if webhook_url == None:
+            webhook_url = "https://www.feishu.cn/flow/api/trigger-webhook/c902ef4c9b6a57988ef22516cec91cac"
+        #send_msg(name, warn)
 
         import datetime
         # today=datetime.datetime.now().strftime('%Y-%m-%d')
@@ -181,7 +183,7 @@ def main():
             '''
             # 第二种方法是通过飞书捷径的webhook发送
             
-            webhook_method(today,yesterday,today_msg,yesterday_msg,name)
+            webhook_method(webhook_url,today,yesterday,today_msg,yesterday_msg,name)
         print("-------------------------done------------------------")
 
  
