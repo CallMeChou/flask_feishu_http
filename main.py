@@ -20,11 +20,11 @@ def bot_test():
 
 @app.route('/报工查询')
 def function1():
-    from check import main
+    import check
     name="小周"
     webhook="https://www.feishu.cn/flow/api/trigger-webhook/c902ef4c9b6a57988ef22516cec91cac"
-    main(name,webhook)
-    return jsonify({"status":200,"message":"报工查询功能"})
+    today,yesterday,today_msg,yesterday_msg,name=check.main()
+    return jsonify({"status":200,"function":"报工查询功能","name": name,"yesterday": yesterday,"yesterday_msg": yesterday_msg,"today": today,"today_msg": today_msg})
 
 
 

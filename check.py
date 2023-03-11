@@ -182,8 +182,11 @@ def main(webhook):
             #send_msg_QiYeWehat(name,warn)
             '''
             # 第二种方法是通过飞书捷径的webhook发送
-            
-            webhook_method(webhook_url,today,yesterday,today_msg,yesterday_msg,name)
+            try:
+                webhook_method(webhook_url,today,yesterday,today_msg,yesterday_msg,name)
+                return today,yesterday,today_msg,yesterday_msg,name
+            except:
+                return False
         print("-------------------------done------------------------")
 
  
