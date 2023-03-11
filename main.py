@@ -7,7 +7,7 @@ app.config['JSON_AS_ASCII'] = False
 
 @app.route('/')
 def root():
-    return jsonify({"challenge": "test challenge"})
+    return {"challenge": "test challenge"}
 
 @app.route('/function')
 def bot_test():
