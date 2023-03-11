@@ -18,7 +18,7 @@ def bot_test():
         "function3": "待开发"
     })
 
-@app.route('/报工情况查询')
+@app.route('/报工查询')
 def function1():
     from check import main
     name="小周"
