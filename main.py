@@ -18,13 +18,13 @@ def bot_test():
         "function3": "待开发"
     })
 
-@app.route('/报工查询')
+@app.route('/报工情况查询')
 def function1():
     from check import main
     name="小周"
     webhook="https://www.feishu.cn/flow/api/trigger-webhook/c902ef4c9b6a57988ef22516cec91cac"
     main(name,webhook)
-    return 
+    return jsonify({"status":200,"message":"报工查询功能"})
 
 
 
