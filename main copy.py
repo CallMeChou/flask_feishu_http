@@ -2,7 +2,7 @@ from flask import Flask, jsonify,render_template
 import os
 from functions import sheet_read
 import pymysql 
-from sql_con import Mysql
+from sql_connect import Mysql
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
